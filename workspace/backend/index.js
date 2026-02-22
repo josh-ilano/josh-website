@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 import dotenv from 'dotenv'
-import { GoogleGenerativeAI } from '@google/generative-ai'
+import { GoogleGenAI } from '@google/genai'
 import { MongoClient } from 'mongodb'
 
 dotenv.config()
@@ -15,24 +15,29 @@ const PORT = process.env.PORT || 4000
 
 const mongourl = process.env.MONGO_URL
 const mongoclient = new MongoClient(mongourl, {})
+const genAI = new GoogleGenAI({})
 
 mongoclient.connect().then(() => {
     console.log("Connected to MongoDB")
 })
 
-const genAI = new GoogleGenerativeAI(process.env.API_KEY)
-const model = genAI.getGenerativeModel({
-    model: "gemini-1.5-flash",
-    systemInstruction: `TBD`,
-})
+function generatePrompt(content) {
+    return genAI.models.generateContent({
+        model: 'gemini-2.5-flash-lite',
+        contents: content,
+    });
+}
+
 
 app.post('/chat', async (req, res) => {
     const userInput = req.body.userInput
     let responseMessage
     try {
-        const result = await model.generateContent(userInput)
-        responseMessage = result.response.text()
+        const result = await generatePrompt(userInput)
+        responseMessage = result.text
+      
     } catch(e) {
+        console.log(e)
         responseMessage = 'Oops, something went wrong!'
     }
     res.json({
