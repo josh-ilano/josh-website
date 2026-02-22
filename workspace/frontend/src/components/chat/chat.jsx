@@ -8,7 +8,7 @@ function Chat() {
     async function getResponse() {
         try {
             if (!userInput) return
-            const response = await fetch('http://localhost:4000/chat', {
+            const response = await fetch('https://josh-website-r3mj.onrender.com/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -19,7 +19,7 @@ function Chat() {
                 throw new Error('Oops, something went wrong!')
             }
             const { message } = await response.json()
-            fetch('http://localhost:4000/add', {
+            fetch('https://josh-website-r3mj.onrender.com/add', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -36,7 +36,7 @@ function Chat() {
     function deleteChatbox(index) {
         let newMessages = [...messages]
         newMessages.splice(index, 2)
-        fetch('http://localhost:4000/delete', {
+        fetch('https://josh-website-r3mj.onrender.com/delete', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -47,7 +47,7 @@ function Chat() {
     }
 
     useEffect(() => {
-        fetch('http://localhost:4000/logs')
+        fetch('https://josh-website-r3mj.onrender.com/logs')
             .then(res => res.json())
             .then(data => {
                 let newMessages = []
