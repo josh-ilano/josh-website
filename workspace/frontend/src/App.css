@@ -6,7 +6,7 @@ body {
   background-position: center;   /* center image */
   background-repeat: no-repeat;  /* prevent tiling */
   background-attachment: fixed;
-  color: #071c3f;
+  color: #000;
 }
 
 .glass::before {
@@ -43,6 +43,11 @@ body {
     0 10px 30px rgba(0,0,0,0.25);
 }
 
+.glass > * {
+  position: relative;
+  z-index: 1;
+}
+
 .glass-chat {
   margin: 0;
     position: fixed;
@@ -54,6 +59,7 @@ body {
   padding-top: 15px;
   background-color: white;
   border-radius: 5px;
+  color: #000;
 }
 
 h2 {
