@@ -1,19 +1,71 @@
 body {
-  font-family: "Mina";
-  background-color: #96d7ff;
+  font-family: "Arial";
+
+  background-image: url("/asadal.jpg");
+  background-size: cover;        /* fill screen */
+  background-position: center;   /* center image */
+  background-repeat: no-repeat;  /* prevent tiling */
+  background-attachment: fixed;
   color: #071c3f;
 }
 
-#about,
+
+
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.1) 40%,
+    rgba(255,255,255,0.0)
+  );
+  pointer-events: none;
+}
+
+.glass {
+  width: 50vw;
+  margin: 30px auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 25px 8px 8px 8px;
+
+  background: rgba(170, 210, 255, 0.22);
+
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+
+  border: 1px solid rgba(255,255,255,0.6);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    0 10px 30px rgba(0,0,0,0.25);
+}
+
+.glass-chat {
+  margin: 0;
+    position: fixed;
+    bottom: 80px;
+
+}
+
+.innerContainer {
+  padding-top: 15px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#about {
+  font-size: medium;
+}
 #chat,
 #projects,
-#exp {
-  width: 60%;
-  margin: 30px auto;
-  background-color: #eff8ff;
-  padding: 30px;
-  border-radius: 6px;
-}
+#exp,
+
+
+
 
 #projects h2,
 #about h2,
@@ -21,7 +73,7 @@ body {
 #exp h2 {
   text-align: center;
   font-size: 35px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   position: relative;
 }
 
@@ -29,7 +81,7 @@ body {
 .job {
   background: #d9ddf2;
   margin: 0 auto;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   width: 75%;
   padding: 25px;
 }
