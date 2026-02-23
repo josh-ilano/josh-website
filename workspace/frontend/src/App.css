@@ -9,12 +9,11 @@ body {
   color: #071c3f;
 }
 
-
-
 .glass::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: linear-gradient(
     to bottom,
     rgba(255,255,255,0.6),
@@ -31,7 +30,7 @@ body {
   border-radius: 15px;
   overflow: hidden;
   padding: 25px 8px 8px 8px;
-
+  z-index: 1;
   background: rgba(170, 210, 255, 0.22);
 
   backdrop-filter: blur(20px) saturate(140%);
@@ -55,6 +54,13 @@ body {
   padding-top: 15px;
   background-color: white;
   border-radius: 5px;
+}
+
+h2 {
+  text-align: center;
+  z-index: 10;
+  color: black;
+  font-size: 44px;
 }
 
 #about {

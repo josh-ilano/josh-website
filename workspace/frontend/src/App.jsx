@@ -12,9 +12,9 @@ function App() {
             <Navbar/>
             <About/>
             
-            <div class="glass">
-                <div class="innerContainer">
-                     <h2>Projects</h2>
+            <div className="glass">
+                <div className="innerContainer">
+                    <h2>Projects</h2>
                     <Projects 
                         name="Projectile System" 
                         description="A modular Luau-based projectile framework supporting dynamically tracked projectiles between moving instances.
@@ -23,8 +23,10 @@ function App() {
                         github="https://github.com/josh-ilano/projectile-controller"/>
                 </div>
             </div> 
-            <div class="glass">
-                <div class="innerContainer">
+
+
+            <div className="glass">
+                <div className="innerContainer">
                     <h2>Experiences</h2>
                     <Experiences 
                         title="Software Developer Intern" 
