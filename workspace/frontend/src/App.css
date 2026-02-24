@@ -1,7 +1,7 @@
 body {
   font-family: "Arial";
 
-  background-image: url("/asadal.jpg");
+  background-image: url("/asadal.webp");
   background-size: cover;        /* fill screen */
   background-position: center;   /* center image */
   background-repeat: no-repeat;  /* prevent tiling */
