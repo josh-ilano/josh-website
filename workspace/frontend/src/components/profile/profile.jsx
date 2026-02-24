@@ -1,11 +1,11 @@
 import './profile.css'
-import ProfileIcon from '../../assets/profile-icon.png'
+import ProfileIcon from '../../assets/profile.jpg'
 
 function Profile() {
     return (
  
         <div id="profile">
-            <div><img width="250" src={ProfileIcon} /></div>
+            <div><img width="250" src={ProfileIcon} style={{"border-radius": "50%"}}/></div>
             <div id="profile-text">
                 <p>Hello, I am Josh Ilano</p>
                 <div className="icons">

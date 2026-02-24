@@ -1,4 +1,4 @@
-function Experiences({title, info, dates, bullets}) {
+function Experience({title, info, dates, bullets}) {
     return (
     
         <div className="job">
@@ -20,4 +20,4 @@ function Experiences({title, info, dates, bullets}) {
 
 
 
-export default Experiences
+export default Experience

@@ -56,10 +56,11 @@ body {
 }
 
 .innerContainer {
-  padding-top: 15px;
+  padding: 15px 10px 10px 10px;
   background-color: white;
   border-radius: 5px;
   color: #000;
+  
 }
 
 h2 {

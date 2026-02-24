@@ -1,13 +1,15 @@
 import './navbar.css'
+import { Link } from 'react-router-dom';
+
 
 function Navbar() {
     return (
         <div id="wrapper">
             <div id="navbar">
                 <h1>Josh Ilano</h1>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#exp">Experiences</a>
+                <Link to="/about">About</Link>
+                <Link to="/projects">Projects</Link>
+                <Link to="/experiences">Experiences</Link>
              </div>
 
             <div id="image-wrapper"> 

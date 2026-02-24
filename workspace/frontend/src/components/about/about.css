@@ -3,9 +3,15 @@
     font-size: 44px;
 }
 
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
 
 .toggler {
-    position: absolute;
     background-color: #2e073f;
     cursor: pointer;
     left: 0;
