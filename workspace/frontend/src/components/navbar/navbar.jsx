@@ -10,7 +10,7 @@ function Navbar() {
                 <Link to="/about">About</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/experiences">Experiences</Link>
-                <Link to="/gamedev">Game Development</Link>
+                <Link to="/gamedev">Game Dev</Link>
              </div>
 
             <div id="image-wrapper"> 
@@ -18,7 +18,7 @@ function Navbar() {
                 <img src="/cloud2.png" alt="cloud" className="cloud cloud-2"></img>
                 <img src="/cloud3.png" alt="cloud" className="cloud cloud-3"></img>
             </div>
-
+x
              
             
 
