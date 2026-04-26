@@ -1,5 +1,5 @@
 import './profile.css'
-import ProfileIcon from '../../assets/profile.jpg'
+import ProfileIcon from '../../assets/profile.png'
 
 function Profile() {
     return (

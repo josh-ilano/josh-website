@@ -10,6 +10,7 @@ function Navbar() {
                 <Link to="/about">About</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/experiences">Experiences</Link>
+                <Link to="/gamedev">Game Development</Link>
              </div>
 
             <div id="image-wrapper"> 
